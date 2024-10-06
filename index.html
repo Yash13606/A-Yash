@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Airbnb Homepage Clone">
+    <title>Airbnb Homepage Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="nav-container">
+            <!-- Logo Section -->
+            <div class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/1200px-Airbnb_Logo_B%C3%A9lo.svg.png" alt="Airbnb Logo" class="logo-img">
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Where" class="search-input">
+                
+                <!-- Check-in and Check-out date pickers -->
+                <input type="date" class="search-input" id="checkin-date" placeholder="Check in">
+                <input type="date" class="search-input" id="checkout-date" placeholder="Check out">
+                
+                <input type="text" placeholder="Who" class="search-input">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="nav-links">
+                <a href="#">Stays</a>
+                <a href="#">Experiences</a>
+                <a href="#">Airbnb your home</a>
+                <a href="#"><i class="fas fa-globe"></i></a>
+                <a href="#"><i class="fas fa-user-circle"></i></a>
+                <a href="#"><i class="fas fa-bars"></i></a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="category-item active">Icons</div>
+        <div class="category-item">Amazing views</div>
+        <div class="category-item">Farms</div>
+        <div class="category-item">Amazing pools</div>
+        <div class="category-item">Historical homes</div>
+        <div class="category-item">Design</div>
+        <div class="category-item">Beachfront</div>
+        <div class="category-item">OMG!</div>
+        <div class="category-item">Countryside</div>
+        <div class="category-item">Luxe</div>
+        <div class="category-item">Treehouses</div>
+        <div class="category-item">Islands</div>
+        <div class="category-item">Castles</div>
+        <div class="category-item">Lakefront</div>
+    </section>
+
+    <!-- Featured Listings Section -->
+    <section class="featured-listings">
+        <!-- Prince's Purple Rain House -->
+        <div class="listing-card">
+            <img src="https://www.rollingstone.com/wp-content/uploads/2024/09/PR1.jpg?w=1581&h=1054&crop=1" alt="Purple Rain House Image">
+            <div class="listing-info">
+                <p>Stay in Prince’s Purple Rain house</p>
+                <p>Hosted by Wendy And Lisa</p>
+                <p>₹564 per guest</p>
+            </div>
+        </div>
+
+        <!-- Living Room Session with Doja Cat -->
+        <div class="listing-card">
+            <img src="https://news.airbnb.com/wp-content/uploads/sites/4/2024/10/03-Doja-Cat-Icons-Airbnb-Credit-Jacob-Webster.jpg?w=2048" alt="Doja Cat Session Image">
+            <div class="listing-info">
+                <p>Join the Living Room Session with Doja Cat</p>
+                <p>Hosted by Doja Cat</p>
+                <p>Coming 8 October</p>
+            </div>
+        </div>
+
+        <!-- Sleepover at Polly Pocket’s Compact -->
+        <div class="listing-card">
+            <img src="https://assets.holidaypirates.group/2024_08/MTcyMzEyNzMzMDc0OQ.jpeg" alt="Polly Pocket Sleepover Image">
+            <div class="listing-info">
+                <p>Sleepover at Polly Pocket’s Compact</p>
+                <p>Hosted by Polly Pocket</p>
+                <p>Sold out</p>
+            </div>
+        </div>
+
+        <!-- Playdate at Polly Pocket’s Compact -->
+        <div class="listing-card">
+            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE4NzE3Nzg1NDA2MjM5NzY2NQ%3D%3D/original/f292c5ae-6b6d-4bf6-9b93-a88b11f021bb.png?im_w=720&im_q=highq" alt="Playdate at Polly Pocket’s Compact Image">
+            <div class="listing-info">
+                <p>Playdate at Polly Pocket’s Compact</p>
+                <p>Hosted by Polly Pocket</p>
+                <p>Sold out</p>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+		<script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+		<script type="text/javascript">
+			window.tailwind.config = {
+				darkMode: ['class'],
+				theme: {
+					extend: {
+						colors: {
+							border: 'hsl(var(--border))',
+							input: 'hsl(var(--input))',
+							ring: 'hsl(var(--ring))',
+							background: 'hsl(var(--background))',
+							foreground: 'hsl(var(--foreground))',
+							primary: {
+								DEFAULT: 'hsl(var(--primary))',
+								foreground: 'hsl(var(--primary-foreground))'
+							},
+							secondary: {
+								DEFAULT: 'hsl(var(--secondary))',
+								foreground: 'hsl(var(--secondary-foreground))'
+							},
+							destructive: {
+								DEFAULT: 'hsl(var(--destructive))',
+								foreground: 'hsl(var(--destructive-foreground))'
+							},
+							muted: {
+								DEFAULT: 'hsl(var(--muted))',
+								foreground: 'hsl(var(--muted-foreground))'
+							},
+							accent: {
+								DEFAULT: 'hsl(var(--accent))',
+								foreground: 'hsl(var(--accent-foreground))'
+							},
+							popover: {
+								DEFAULT: 'hsl(var(--popover))',
+								foreground: 'hsl(var(--popover-foreground))'
+							},
+							card: {
+								DEFAULT: 'hsl(var(--card))',
+								foreground: 'hsl(var(--card-foreground))'
+							},
+						},
+					}
+				}
+			}
+		</script>
+		<style type="text/tailwindcss">
+			@layer base {
+				:root {
+					--background: 0 0% 100%;
+--foreground: 240 10% 3.9%;
+--card: 0 0% 100%;
+--card-foreground: 240 10% 3.9%;
+--popover: 0 0% 100%;
+--popover-foreground: 240 10% 3.9%;
+--primary: 240 5.9% 10%;
+--primary-foreground: 0 0% 98%;
+--secondary: 240 4.8% 95.9%;
+--secondary-foreground: 240 5.9% 10%;
+--muted: 240 4.8% 95.9%;
+--muted-foreground: 240 3.8% 46.1%;
+--accent: 240 4.8% 95.9%;
+--accent-foreground: 240 5.9% 10%;
+--destructive: 0 84.2% 60.2%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 5.9% 90%;
+--input: 240 5.9% 90%;
+--ring: 240 5.9% 10%;
+--radius: 0.5rem;
+				}
+				.dark {
+					--background: 240 10% 3.9%;
+--foreground: 0 0% 98%;
+--card: 240 10% 3.9%;
+--card-foreground: 0 0% 98%;
+--popover: 240 10% 3.9%;
+--popover-foreground: 0 0% 98%;
+--primary: 0 0% 98%;
+--primary-foreground: 240 5.9% 10%;
+--secondary: 240 3.7% 15.9%;
+--secondary-foreground: 0 0% 98%;
+--muted: 240 3.7% 15.9%;
+--muted-foreground: 240 5% 64.9%;
+--accent: 240 3.7% 15.9%;
+--accent-foreground: 0 0% 98%;
+--destructive: 0 62.8% 30.6%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 3.7% 15.9%;
+--input: 240 3.7% 15.9%;
+--ring: 240 4.9% 83.9%;
+				}
+			}
+		</style>
+  </head>
+  <body>
+    <div class="bg-background p-6">
+  <h2 class="text-2xl font-bold mb-4">Inspiration for future getaways</h2>
+  <div class="flex space-x-4 mb-4">
+    <button class="bg-primary text-primary-foreground px-4 py-2 rounded">Popular</button>
+    <button class="bg-muted text-muted-foreground px-4 py-2 rounded">Arts & culture</button>
+    <button class="bg-muted text-muted-foreground px-4 py-2 rounded">Outdoors</button>
+    <button class="bg-muted text-muted-foreground px-4 py-2 rounded">Mountains</button>
+    <button class="bg-muted text-muted-foreground px-4 py-2 rounded">Beach</button>
+    <button class="bg-muted text-muted-foreground px-4 py-2 rounded">Unique stays</button>
+    <button class="bg-muted text-muted-foreground px-4 py-2 rounded">Categories</button>
+  </div>
+  <div class="grid grid-cols-2 gap-4">
+    <div class="border p-4 rounded bg-card">
+      <h3 class="font-semibold">Canmore</h3>
+      <p class="text-muted-foreground">Flat rentals</p>
+    </div>
+    <div class="border p-4 rounded bg-card">
+      <h3 class="font-semibold">Benalmádena</h3>
+      <p class="text-muted-foreground">Flat rentals</p>
+    </div>
+    <div class="border p-4 rounded bg-card">
+      <h3 class="font-semibold">Marbella</h3>
+      <p class="text-muted-foreground">Flat rentals</p>
+    </div>
+    <div class="border p-4 rounded bg-card">
+      <h3 class="font-semibold">Mijas</h3>
+      <p class="text-muted-foreground">Flat rentals</p>
+    </div>
+    <div class="border p-4 rounded bg-card">
+      <h3 class="font-semibold">Tucson</h3>
+      <p class="text-muted-foreground">House rentals</p>
+    </div>
+    <div class="border p-4 rounded bg-card">
+      <h3 class="font-semibold">Jasper</h3>
+      <p class="text-muted-foreground">Cabin rentals</p>
+    </div>
+    <div class="border p-4 rounded bg-card">
+      <h3 class="font-semibold">Mountain View</h3>
+      <p class="text-muted-foreground">Pet-friendly rentals</p>
+    </div>
+    <div class="border p-4 rounded bg-card">
+      <h3 class="font-semibold">Devonport</h3>
+      <p class="text-muted-foreground">Cottage rentals</p>
+    </div>
+    <div class="border p-4 rounded bg-card">
+      <h3 class="font-semibold">Scottsdale</h3>
+      <p class="text-muted-foreground">House rentals</p>
+    </div>
+    <div class="border p-4 rounded bg-card">
+      <h3 class="font-semibold">Ibiza</h3>
+      <p class="text-muted-foreground">Holiday rentals</p>
+    </div>
+    <div class="border p-4 rounded bg-card">
+      <h3 class="font-semibold">Anaheim</h3>
+      <p class="text-muted-foreground">Apartment rentals</p>
+    </div>
+    <div class="border p-4 rounded bg-card">
+      <h3 class="font-semibold">Monterey</h3>
+      <p class="text-muted-foreground">Flat rentals</p>
+    </div>
+    <div class="border p-4 rounded bg-card">
+      <h3 class="font-semibold">Paso Robles</h3>
+      <p class="text-muted-foreground">House rentals</p>
+    </div>
+    <div class="border p-4 rounded bg-card">
+      <h3 class="font-semibold">Santa Barbara</h3>
+      <p class="text-muted-foreground">Apartment rentals</p>
+    </div>
+    <div class="border p-4 rounded bg-card">
+      <h3 class="font-semibold">Sonoma</h3>
+      <p class="text-muted-foreground">Cottage rentals</p>
+    </div>
+    <div class="border p-4 rounded bg-card">
+      <h3 class="font-semibold">Mallacoota</h3>
+      <p class="text-muted-foreground">Pet-friendly rentals</p>
+    </div>
+    <div class="border p-4 rounded bg-card">
+      <h3 class="font-semibold">Prescott</h3>
+      <p class="text-muted-foreground">Pet-friendly rentals</p>
+    </div>
+  </div>
+  <button class="mt-4 text-primary">Show more</button>
+</div>
+  </body>
+</html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+		<script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+		<script type="text/javascript">
+			window.tailwind.config = {
+				darkMode: ['class'],
+				theme: {
+					extend: {
+						colors: {
+							border: 'hsl(var(--border))',
+							input: 'hsl(var(--input))',
+							ring: 'hsl(var(--ring))',
+							background: 'hsl(var(--background))',
+							foreground: 'hsl(var(--foreground))',
+							primary: {
+								DEFAULT: 'hsl(var(--primary))',
+								foreground: 'hsl(var(--primary-foreground))'
+							},
+							secondary: {
+								DEFAULT: 'hsl(var(--secondary))',
+								foreground: 'hsl(var(--secondary-foreground))'
+							},
+							destructive: {
+								DEFAULT: 'hsl(var(--destructive))',
+								foreground: 'hsl(var(--destructive-foreground))'
+							},
+							muted: {
+								DEFAULT: 'hsl(var(--muted))',
+								foreground: 'hsl(var(--muted-foreground))'
+							},
+							accent: {
+								DEFAULT: 'hsl(var(--accent))',
+								foreground: 'hsl(var(--accent-foreground))'
+							},
+							popover: {
+								DEFAULT: 'hsl(var(--popover))',
+								foreground: 'hsl(var(--popover-foreground))'
+							},
+							card: {
+								DEFAULT: 'hsl(var(--card))',
+								foreground: 'hsl(var(--card-foreground))'
+							},
+						},
+					}
+				}
+			}
+		</script>
+		<style type="text/tailwindcss">
+			@layer base {
+				:root {
+					--background: 0 0% 100%;
+--foreground: 240 10% 3.9%;
+--card: 0 0% 100%;
+--card-foreground: 240 10% 3.9%;
+--popover: 0 0% 100%;
+--popover-foreground: 240 10% 3.9%;
+--primary: 240 5.9% 10%;
+--primary-foreground: 0 0% 98%;
+--secondary: 240 4.8% 95.9%;
+--secondary-foreground: 240 5.9% 10%;
+--muted: 240 4.8% 95.9%;
+--muted-foreground: 240 3.8% 46.1%;
+--accent: 240 4.8% 95.9%;
+--accent-foreground: 240 5.9% 10%;
+--destructive: 0 84.2% 60.2%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 5.9% 90%;
+--input: 240 5.9% 90%;
+--ring: 240 5.9% 10%;
+--radius: 0.5rem;
+				}
+				.dark {
+					--background: 240 10% 3.9%;
+--foreground: 0 0% 98%;
+--card: 240 10% 3.9%;
+--card-foreground: 0 0% 98%;
+--popover: 240 10% 3.9%;
+--popover-foreground: 0 0% 98%;
+--primary: 0 0% 98%;
+--primary-foreground: 240 5.9% 10%;
+--secondary: 240 3.7% 15.9%;
+--secondary-foreground: 0 0% 98%;
+--muted: 240 3.7% 15.9%;
+--muted-foreground: 240 5% 64.9%;
+--accent: 240 3.7% 15.9%;
+--accent-foreground: 0 0% 98%;
+--destructive: 0 62.8% 30.6%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 3.7% 15.9%;
+--input: 240 3.7% 15.9%;
+--ring: 240 4.9% 83.9%;
+				}
+			}
+		</style>
+  </head>
+  <body>
+    
+
+<footer class="bg-background text-foreground p-6">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div>
+      <h3 class="font-semibold text-primary">Support</h3>
+      <ul class="mt-2 space-y-1">
+        <li><a href="#" class="text-muted-foreground hover:text-muted">Help Centre</a></li>
+        <li><a href="#" class="text-muted-foreground hover:text-muted">AirCover</a></li>
+        <li><a href="#" class="text-muted-foreground hover:text-muted">Anti-discrimination</a></li>
+        <li><a href="#" class="text-muted-foreground hover:text-muted">Disability support</a></li>
+        <li><a href="#" class="text-muted-foreground hover:text-muted">Cancellation options</a></li>
+        <li><a href="#" class="text-muted-foreground hover:text-muted">Report neighbourhood concern</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-semibold text-primary">Hosting</h3>
+      <ul class="mt-2 space-y-1">
+        <li><a href="#" class="text-muted-foreground hover:text-muted">Airbnb your home</a></li>
+        <li><a href="#" class="text-muted-foreground hover:text-muted">AirCover for Hosts</a></li>
+        <li><a href="#" class="text-muted-foreground hover:text-muted">Hosting resources</a></li>
+        <li><a href="#" class="text-muted-foreground hover:text-muted">Community forum</a></li>
+        <li><a href="#" class="text-muted-foreground hover:text-muted">Hosting responsibly</a></li>
+        <li><a href="#" class="text-muted-foreground hover:text-muted">Join a free Hosting class</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-semibold text-primary">Airbnb</h3>
+      <ul class="mt-2 space-y-1">
+        <li><a href="#" class="text-muted-foreground hover:text-muted">Newsroom</a></li>
+        <li><a href="#" class="text-muted-foreground hover:text-muted">New features</a></li>
+        <li><a href="#" class="text-muted-foreground hover:text-muted">Careers</a></li>
+        <li><a href="#" class="text-muted-foreground hover:text-muted">Investors</a></li>
+        <li><a href="#" class="text-muted-foreground hover:text-muted">Airbnb.org emergency stays</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="mt-6 border-t border-border pt-4 text-center text-sm text-muted-foreground">
+    <p>
+      © 2024 Airbnb, Inc. • <a href="#" class="hover:text-muted">Privacy</a> • <a href="#" class="hover:text-muted">Terms</a> • <a href="#" class="hover:text-muted">Sitemap</a> •
+      <a href="#" class="hover:text-muted">Company details</a>
+    </p>
+    <p class="mt-2">English (IN) • ₹ INR</p>
+  </div>
+</footer>
+
+
+  </body>
+</html>

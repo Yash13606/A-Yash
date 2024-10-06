@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+/* Header Styles */
+header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    animation: fadeIn 0.8s ease-out; /* Header fade-in on page load */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Animation */
+.logo {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease; /* Subtle scaling on hover */
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.logo img {
+    height: 50px; /* Adjusted height for the Airbnb logo */
+    width: auto;
+    margin-right: 20px; /* Space between logo and search bar */
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+}
+
+.search-input {
+    border: 1px solid #ddd;
+    padding: 12px 20px;
+    border-radius: 20px;
+    margin-right: 10px;
+    width: 140px;
+    transition: box-shadow 0.3s ease, width 0.3s ease;
+}
+
+.search-input:focus {
+    width: 200px; /* Expands input on focus */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow on focus */
+}
+
+/* Date Input Styling */
+.search-input[type="date"] {
+    width: 150px; /* Adjusted width for date input */
+    padding: 10px;
+}
+
+.search-btn {
+    background-color: #ff385c;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: #e0334f; /* Slight color change on hover */
+    transform: scale(1.1); /* Button grows slightly on hover */
+}
+
+.search-btn i {
+    font-size: 18px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff385c; /* Changes color on hover */
+}
+
+.nav-links a i {
+    font-size: 20px;
+}
+
+/* Categories Section */
+.categories {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    overflow-x: auto;
+}
+
+.category-item {
+    padding: 10px 15px;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.category-item:hover {
+    transform: scale(1.1); /* Category items grow slightly on hover */
+}
+
+.category-item.active {
+    border-bottom: 2px solid #ff385c;
+    font-weight: bold;
+    animation: bounce 0.4s ease; /* Bounce effect on the active category */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Featured Listings Section */
+.featured-listings {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.listing-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.listing-card:hover {
+    transform: translateY(-10px); /* Card rises slightly on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.listing-card img {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    transition: opacity 0.3s ease;
+}
+
+.listing-card:hover img {
+    opacity: 0.9; /* Image becomes slightly dimmer on hover */
+}
+
+.listing-info {
+    padding: 15px;
+}
+
+.listing-info p {
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.listing-card:hover .listing-info p {
+    color: #ff385c; /* Changes text color on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #f7f7f7;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    animation: fadeIn 1.2s ease-out; /* Footer fade-in effect */
+}
+
+.footer-content p {
+    color: #777;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-content p:hover {
+    color: #333; /* Darkens text on hover */
+}
